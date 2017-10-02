@@ -1,0 +1,7 @@
+<h1>您好，想申請第幾類商標？</h1>
+
+<% @categories.each do |category| %>
+  <%= link_to category.number, category_path(category.id) %>
+  <%= category.name %>
+  <br>
+<% end %>

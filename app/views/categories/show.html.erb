@@ -1,0 +1,9 @@
+<h1><%= "第#{@category.number}類商標" %>:</h1>
+<h1><%= @category.name %></h1>
+
+<br>
+<% @items.each do |item| %>
+  <%= item.group_code %>
+  <%= item.name %>
+  <br>
+<% end %>

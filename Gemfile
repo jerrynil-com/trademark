@@ -7,6 +7,9 @@ end
 gem 'awesome_print'
 gem 'pry'
 
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 

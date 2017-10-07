@@ -7,6 +7,9 @@ end
 gem 'awesome_print'
 gem 'pry'
 
+# authentication
+gem 'devise'
+
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 

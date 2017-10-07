@@ -1,3 +1,7 @@
+<%= link_to '登入', new_user_session_path %>
+<br>
+<%= link_to '登出', destroy_user_session_path, method: :delete %>
+<br>
 <h1>您好，想申請第幾類商標？</h1>
 
 <% @categories.each do |category| %>

@@ -1,3 +1,7 @@
+<%= link_to '登入', new_user_session_path %>
+<br>
+<%= link_to '登出', destroy_user_session_path, method: :delete %>
+<br>
 <%= link_to '回到首頁', categories_path %>
 <br>
 <%= link_to '新增商品項目', new_category_item_path(@category) %>

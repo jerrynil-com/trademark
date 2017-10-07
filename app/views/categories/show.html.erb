@@ -1,4 +1,6 @@
 <%= link_to '回到首頁', categories_path %>
+<br>
+<%= link_to '新增商品項目', new_category_item_path(@category) %>
 <h1><%= "第#{@category.number}類商標" %>:</h1>
 <h1><%= @category.name %></h1>
 

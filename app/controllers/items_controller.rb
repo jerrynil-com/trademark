@@ -6,8 +6,19 @@ class ItemsController < ApplicationController
     @items = Item.all
   end
 
-  def edit
+  def new
+    @item = @category.items.new
+  end
 
+  def create
+    if @item = @category.items.create(item_params)
+      redirect_to category_path(@category)
+    else
+      render 'categories/show'
+    end
+  end
+
+  def edit
   end
 
   def update

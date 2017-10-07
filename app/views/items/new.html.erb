@@ -1,5 +1,5 @@
-<h1>更新商品項目</h1>
-<%= form_for @item, url: category_item_path(@category, @item) do |f| %>
+<h1>新增商品項目</h1>
+<%= form_for @item, url: category_items_path(@category, @item) do |f| %>
   <%= f.label :name, '名稱' %>
   <%= f.text_field :name %>
 

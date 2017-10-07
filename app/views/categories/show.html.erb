@@ -5,8 +5,10 @@
 <h1><%= @category.name %></h1>
 
 <br>
-<% @category.items.each do |item| %>
-  <%= item.group_code %>
-  <%= link_to item.name, edit_category_item_path(@category, item) %>
-  <br>
+<% @uniq_group_codes.each do |group_code| %>
+  <h1><%= "群組代碼：#{group_code}" %></h1>
+  <% @category.items.where(group_code: group_code).each do |item| %>
+    <%= item.group_code %>
+    <%= link_to item.name, edit_category_item_path(@category, item) %>
+  <% end %>
 <% end %>

@@ -1,9 +1,10 @@
+<%= link_to '回到首頁', categories_path %>
 <h1><%= "第#{@category.number}類商標" %>:</h1>
 <h1><%= @category.name %></h1>
 
 <br>
-<% @items.each do |item| %>
+<% @category.items.each do |item| %>
   <%= item.group_code %>
-  <%= item.name %>
+  <%= link_to item.name, edit_category_item_path(@category, item) %>
   <br>
 <% end %>

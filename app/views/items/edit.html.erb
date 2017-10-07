@@ -1,0 +1,10 @@
+<%= form_for @item, url: category_item_path(@category, @item) do |f| %>
+  <%= f.label :name, '名稱' %>
+  <%= f.text_field :name %>
+
+  <%= f.label :group_code, '群組代碼' %>
+  <%= f.text_field :group_code %>
+
+  <%= f.submit '確定' %>
+
+<% end %>

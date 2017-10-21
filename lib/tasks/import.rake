@@ -14,7 +14,7 @@ namespace :import do
   task items: :environment do
     counter = 0
     (1..45).each do |f|
-      CSV.foreach("goods/items_1.csv", headers: true) do |row|
+      CSV.foreach("goods/items_#{f}.csv", headers: true) do |row|
         item = Category.find_by(number: f).items.create(group_code: row[0], name: row[1])
         counter += 1 if item.persisted?
       end
